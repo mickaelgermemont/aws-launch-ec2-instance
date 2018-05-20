@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:TerminateInstances",
+                "ec2:CreateSecurityGroup",
+                "ec2:CreateKeyPair",
+                "ec2:DescribeRegions",
+                "ec2:RunInstances",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeInstanceStatus"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "ec2:AuthorizeSecurityGroupIngress",
+            "Resource": "arn:aws:ec2:*:*:security-group/*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": "ec2:DeleteSecurityGroup",
+            "Resource": "arn:aws:ec2:*:*:security-group/*"
+        }
+    ]
+}
